@@ -1,6 +1,6 @@
 # grunt-html-upgrader
 
-> Upgrade your html files in a snap
+> Upgrade your html files with Grunt!
 
 ## Getting Started
 This plugin requires Grunt `~0.4.2`
@@ -26,9 +26,12 @@ In your project's Gruntfile, add a section named `html_upgrader` to the data obj
 grunt.initConfig({
   html_upgrader: {
     options: {
+      type: 'bootstrap2-3' //optional
     },
     main: {
-      src: ['path/to/my/html/**/*.html']
+      files: {
+        'dest/path': ['path/to/my/html/**/*.html']
+      }
     },
   },
 });
@@ -36,10 +39,9 @@ grunt.initConfig({
 
 ### Upgraders
 
-Bootstrap 2.3 -> 3.0
+* _Bootstrap 2.3 -> 3.0_
 
 Upgrade bootstrap 2.3 html to 3.0 in seconds.
-
 Thanks to @divshot for most of the work https://github.com/divshot/bootstrap3_upgrader
 
 
