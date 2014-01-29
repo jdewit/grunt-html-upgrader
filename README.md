@@ -26,7 +26,7 @@ In your project's Gruntfile, add a section named `html_upgrader` to the data obj
 grunt.initConfig({
   html_upgrader: {
     options: {
-      type: 'bootstrap2-3' //optional
+      type: 'bootstrap2-3' //available ['bootsrap2-3', 'fontAwesome3-4']
     },
     main: {
       files: {
@@ -40,9 +40,11 @@ grunt.initConfig({
 ### Upgraders
 
 * _Bootstrap 2.3 -> 3.0_
-
-Upgrade bootstrap 2.3 html to 3.0 in seconds.
+Upgrade bootstrap from version 2.3 to 3.0.
 Thanks to @divshot for most of the work https://github.com/divshot/bootstrap3_upgrader
+
+* _Font Awesome 3 -> 4
+Upgrade Font Awesome from version 3 to 4
 
 
 ### Status

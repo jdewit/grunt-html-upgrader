@@ -1,6 +1,7 @@
 var cheerio = require('cheerio'),
     upgraders = [
-      'bootstrap2-3'
+      'bootstrap2-3',
+      'fontAwesome3-4'
     ];
 
 module.exports = {

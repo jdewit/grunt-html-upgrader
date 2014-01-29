@@ -27,22 +27,20 @@ exports.html_upgrader = {
     // setup here if necessary
     done();
   },
-  default_options: function(test) {
-    test.expect(1);
-
-    //var actual = grunt.file.read('tmp/buttons.html');
-    //var expected = grunt.file.read('test/expected/default_options');
-    //test.equal(actual, expected, 'should describe what the default behavior is.');
-    test.equal(true, true);
-    test.done();
-  },
-  //custom_options: function(test) {
+  bootstrap: function(test) {
     //test.expect(1);
 
-    //var actual = grunt.file.read('tmp/custom_options');
-    //var expected = grunt.file.read('test/expected/custom_options');
-    //test.equal(actual, expected, 'should describe what the custom option(s) behavior is.');
+    var actual = grunt.file.read('tmp/test/bootstrap2-3/fixtures/buttons.html');
+    var expected = grunt.file.read('test/bootstrap2-3/expected/buttons.html');
+    test.equal(actual, expected, 'should describe what the default behavior is.');
+    test.done();
+  },
+  fontAwesome: function(test) {
+    //test.expect(1);
 
-    //test.done();
-  //},
+    var actual = grunt.file.read('tmp/test/fontAwesome3-4/fixtures/icons.html');
+    var expected = grunt.file.read('test/fontAwesome3-4/expected/icons.html');
+    test.equal(actual, expected, 'should describe what the default behavior is.');
+    test.done();
+  }
 };

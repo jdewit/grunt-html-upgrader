@@ -30,23 +30,22 @@ module.exports = function(grunt) {
 
     // Configuration to be run (and then tested).
     html_upgrader: {
-      main: {
+      bootstrap2_3: {
         options: {
+          type: 'bootstrap2-3'
         },
         files: {
-          'tmp/output': ['test/fixtures/**/*.html'],
+          'tmp': ['test/bootstrap2-3/fixtures/**/*.html'],
+        },
+      },
+      fontAwesome3_4: {
+        options: {
+          type: 'fontAwesome3-4'
+        },
+        files: {
+          'tmp': ['test/fontAwesome3-4/fixtures/**/*.html'],
         },
       }
-      //,
-      //custom_options: {
-        //options: {
-          //separator: ': ',
-          //punctuation: ' !!!',
-        //},
-        //files: {
-          //'tmp/custom_options': ['test/fixtures/testing', 'test/fixtures/123'],
-        //},
-      //},
     },
 
     // Unit tests.
