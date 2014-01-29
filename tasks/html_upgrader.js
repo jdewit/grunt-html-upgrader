@@ -33,7 +33,11 @@ module.exports = function(grunt) {
 
         contents = Upgrader.run(grunt.file.read(filepath), options.type, grunt);
 
-        grunt.file.write(f.dest + '/' + filepath, contents);
+        if (f.dest) {
+          grunt.file.write(f.dest + '/' + filepath, contents);
+        } else {
+          grunt.file.write(filepath, contents);
+        }
 
         grunt.log.writeln('Upgraded' + filepath + ' successfully.');
 
