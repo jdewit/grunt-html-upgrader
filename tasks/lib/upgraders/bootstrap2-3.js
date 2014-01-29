@@ -102,9 +102,6 @@ module.exports = [
       var horizontalControls = $('.form-horizontal .controls').removeClass('controls').addClass('col-lg-9').addClass('col-md-9');
       count += horizontalControls.length;
 
-      var horizontalForms = $('.form-horizontal').removeClass('form-horizontal');
-      count += horizontalForms.length;
-
       var formInputs = $("input:not([type=checkbox], [type=radio])").addClass("form-control");
       count += formInputs.length;
 
