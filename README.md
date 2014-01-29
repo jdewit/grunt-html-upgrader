@@ -43,7 +43,7 @@ grunt.initConfig({
 Upgrade bootstrap from version 2.3 to 3.0.
 Thanks to @divshot for most of the work https://github.com/divshot/bootstrap3_upgrader
 
-* _Font Awesome 3 -> 4
+* _Font Awesome 3 -> 4_
 Upgrade Font Awesome from version 3 to 4
 
 
