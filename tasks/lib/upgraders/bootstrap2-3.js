@@ -96,10 +96,10 @@ module.exports = [
       var controlGroups = $(".control-group").removeClass('control-group').addClass('form-group');
       count += controlGroups.length;
 
-      var horizontalLabels = $('.horizontal-form .control-label').addClass('col-lg-2');
+      var horizontalLabels = $('.horizontal-form .control-label').addClass('col-lg-3').addClass('col-md-3');
       count += horizontalLabels.length;
 
-      var horizontalControls = $('.horizontal-form .controls').addClass('col-lg-2').removeClass('controls');
+      var horizontalControls = $('.horizontal-form .controls').removeClass('controls').addClass('col-lg-9').addClass('col-md-9');
       count += horizontalControls.length;
 
       var formInputs = $("input:not([type=checkbox], [type=radio])").addClass("form-control");

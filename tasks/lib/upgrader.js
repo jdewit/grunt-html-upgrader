@@ -19,12 +19,19 @@ module.exports = {
 
     for (var i = 0; i < rules.length; i++) {
       rule = rules[i];
-      results.push(rule.run($));
+      try {
+        results.push(rule.run($));
+      } catch(e) {
+        grunt.log.warn('Error processing the ruleset with title "' + rule.title + '"');
+      }
     }
 
     var html = $.html();
 
-    html = html.replace(/&apos;/g, "'"); // apostrophe fix
+    html = html.replace(/&apos;/g, "'"); // ' fix
+    html = html.replace(/&amp;&amp;/g, "&&"); // && fix
+    html = html.replace(/&gt;/g, ">"); // > fix
+    html = html.replace(/&lt;/g, "<"); // < fix
 
     return html;
   }
