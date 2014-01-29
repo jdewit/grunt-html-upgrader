@@ -1,7 +1,7 @@
 {
   "name": "grunt-html-upgrader",
   "description": "Upgrade your html files in a snap",
-  "version": "0.1.5",
+  "version": "0.1.6",
   "homepage": "https://github.com/jdewit/html-upgrader",
   "author": {
     "name": "Joris de Wit",
