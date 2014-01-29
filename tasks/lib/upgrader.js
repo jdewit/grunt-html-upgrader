@@ -22,6 +22,10 @@ module.exports = {
       results.push(rule.run($));
     }
 
-    return $.html();
+    var html = $.html();
+
+    html = html.replace(/&apos;/g, "'"); // apostrophe fix
+
+    return html;
   }
 };
