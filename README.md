@@ -26,64 +26,27 @@ In your project's Gruntfile, add a section named `html_upgrader` to the data obj
 grunt.initConfig({
   html_upgrader: {
     options: {
-      // Task-specific options go here.
     },
-    your_target: {
-      // Target-specific file lists and/or options go here.
-    },
-  },
-});
-```
-
-### Options
-
-#### options.separator
-Type: `String`
-Default value: `',  '`
-
-A string value that is used to do something with whatever.
-
-#### options.punctuation
-Type: `String`
-Default value: `'.'`
-
-A string value that is used to do something else with whatever else.
-
-### Usage Examples
-
-#### Default Options
-In this example, the default options are used to do something with whatever. So if the `testing` file has the content `Testing` and the `123` file had the content `1 2 3`, the generated result would be `Testing, 1 2 3.`
-
-```js
-grunt.initConfig({
-  html_upgrader: {
-    options: {},
-    files: {
-      'dest/default_options': ['src/testing', 'src/123'],
+    main: {
+      src: ['path/to/my/html/**/*.html']
     },
   },
 });
 ```
 
-#### Custom Options
-In this example, custom options are used to do something else with whatever else. So if the `testing` file has the content `Testing` and the `123` file had the content `1 2 3`, the generated result in this case would be `Testing: 1 2 3 !!!`
+### Upgraders
 
-```js
-grunt.initConfig({
-  html_upgrader: {
-    options: {
-      separator: ': ',
-      punctuation: ' !!!',
-    },
-    files: {
-      'dest/default_options': ['src/testing', 'src/123'],
-    },
-  },
-});
-```
+Bootstrap 2.3 -> 3.0
 
-## Contributing
-In lieu of a formal styleguide, take care to maintain the existing coding style. Add unit tests for any new or changed functionality. Lint and test your code using [Grunt](http://gruntjs.com/).
+Upgrade bootstrap 2.3 html to 3.0 in seconds.
 
-## Release History
-_(Nothing yet)_
+Thanks to @divshot for most of the work https://github.com/divshot/bootstrap3_upgrader
+
+
+### Status
+
+This is still unstable and a WIP. 
+
+Any help with adding more upgrade scripts and improving the project is much appreciated.
+
+
