@@ -1,14 +1,42 @@
 <form class="form-horizontal">
-  <div class="form-group">
-      <label class="control-label" for="nameInput">Name</label>
-      <div class="controls">
-          <input id="nameInput" type="text" name="name" class="form-control">
+  <input id="check" type="checkbox" name="check">
+  <div class="control-group">
+    <label class="control-label" for="nameInput">Name</label>
+    <div class="controls">
+      <div class="input-append">
+        <input id="nameInput" type="text" name="name">
+        <a class="btn"><i class="icon-remove"></i></a>
       </div>
+    </div>
   </div>
-  <div class="form-group">
+  <div class="control-group">
+    <label class="control-label" for="amountInput">Amount</label>
+    <div class="controls">
+      <div class="input-prepend">
+        <span class="add-on">$</span>
+        <input id="amountInput" type="text" name="amount">
+      </div>
+    </div>
+  </div>
+  <div class="control-group">
     <label class="control-label" for="descriptionTextarea">Description</label>
     <div class="controls">
-      <textarea id="descriptionTextarea" name="description" class="form-control"></textarea>
+      <textarea id="descriptionTextarea" name="description"></textarea>
+    </div>
+  </div>
+</form>
+
+<form>
+  <div class="control-group">
+    <label class="control-label" for="nameInput">Name</label>
+    <div class="controls">
+      <input id="nameInput" type="text" name="name">
+    </div>
+  </div>
+  <div class="control-group">
+    <label class="control-label" for="descriptionTextarea">Description</label>
+    <div class="controls">
+      <textarea id="descriptionTextarea" name="description"></textarea>
     </div>
   </div>
 </form>

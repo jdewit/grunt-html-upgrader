@@ -102,8 +102,67 @@ module.exports = [
       var horizontalControls = $('.form-horizontal .controls').removeClass('controls').addClass('col-lg-9').addClass('col-md-9');
       count += horizontalControls.length;
 
-      var formInputs = $("input:not([type=checkbox], [type=radio])").addClass("form-control");
+      var formInputs = $("input:not([type=checkbox], [type=radio]), textarea, select").addClass("form-control");
       count += formInputs.length;
+
+      // sure wish we could wrap elements
+      var inputAppends = $(".input-append");
+      var $append;
+      inputAppends.each(function() {
+        $append = $(this);
+        $append.removeClass('input-append').addClass('input-group');
+
+        var html = $append.html();
+        var start = html.indexOf('<a');
+        var end = html.indexOf('a>');
+
+        if (start !== -1 && end !== -1) {
+          var btnHtml = html.slice(start, end);
+
+          $append.find('.btn').replaceWith('<div class="input-group-btn">' + btnHtml + '</div>');
+        } else {
+          start = html.indexOf('<button');
+          end = html.indexOf('button>');
+
+          if (start !== -1 && end !== -1) {
+            btnHtml = html.slice(start, end);
+
+            $append.find('.btn').replaceWith('<div class="input-group-btn">' + btnHtml + '</div>');
+          }
+        }
+
+        $append.find('.add-on').removeClass('add-on').addClass('input-group-addon');
+      });
+      count += inputAppends.length;
+
+      var inputPrepends = $(".input-prepend");
+      var $prepend;
+      inputPrepends.each(function() {
+        $prepend = $(this);
+        $prepend.removeClass('input-prepend').addClass('input-group');
+
+        var html = $prepend.html();
+        var start = html.indexOf('<a');
+        var end = html.indexOf('a>');
+
+        if (start !== -1 && end !== -1) {
+          var btnHtml = html.slice(start, end);
+
+          $prepend.find('.btn').replaceWith('<div class="input-group-btn">' + btnHtml + '</div>');
+        } else {
+          start = html.indexOf('<button');
+          end = html.indexOf('button>');
+
+          if (start !== -1 && end !== -1) {
+            btnHtml = html.slice(start, end);
+
+            $prepend.find('.btn').replaceWith('<div class="input-group-btn">' + btnHtml + '</div>');
+          }
+        }
+
+        $prepend.find('.add-on').removeClass('add-on').addClass('input-group-addon');
+      });
+      count += inputPrepends.length;
 
       var checkboxLabels = $("label.checkbox:not(.inline)");
       checkboxLabels.each(function(box) {
@@ -220,6 +279,14 @@ module.exports = [
       $inline = $("ul.inline, ol.inline");
       $inline.removeClass('inline').addClass('list-inline');
       count += $inline.length;
+
+      $images = $("img");
+      $images.addClass('img-responsive');
+      count += $images.length;
+
+      $navHeaders = $(".dropdown-menu .nav-header");
+      $navHeaders.removeClass('nav-header').addClass('dropdown-header');
+      count += $navHeaders.length;
 
       return (count > 0) ? count + " Replaced" : false;
     }

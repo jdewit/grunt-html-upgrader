@@ -30,7 +30,7 @@ grunt.initConfig({
     },
     main: {
       files: {
-        'dest/path': ['path/to/my/html/**/*.html']
+        '': ['path/to/my/html/**/*.html'] // empty destination path will overwrite your files!
       }
     },
   },

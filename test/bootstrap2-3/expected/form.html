@@ -1,13 +1,41 @@
-<form class="">
+<form class="form-horizontal">
+  <input id="check" type="checkbox" name="check">
   <div class="form-group">
-      <label class="control-label col-lg-3 col-md-3" for="nameInput">Name</label>
-      <div class="col-lg-9 col-md-9">
-          <input id="nameInput" type="text" name="name" class="form-control">
+    <label class="control-label col-lg-3 col-md-3" for="nameInput">Name</label>
+    <div class="col-lg-9 col-md-9">
+      <div class="input-group">
+        <input id="nameInput" type="text" name="name" class="form-control">
+        <div class="input-group-btn"><a class="btn btn-default"><i class="icon-remove"></i></a></div>
       </div>
+    </div>
+  </div>
+  <div class="form-group">
+    <label class="control-label col-lg-3 col-md-3" for="amountInput">Amount</label>
+    <div class="col-lg-9 col-md-9">
+      <div class="input-group">
+        <span class="input-group-addon">$</span>
+        <input id="amountInput" type="text" name="amount" class="form-control">
+      </div>
+    </div>
   </div>
   <div class="form-group">
     <label class="control-label col-lg-3 col-md-3" for="descriptionTextarea">Description</label>
     <div class="col-lg-9 col-md-9">
+      <textarea id="descriptionTextarea" name="description" class="form-control"></textarea>
+    </div>
+  </div>
+</form>
+
+<form>
+  <div class="form-group">
+    <label class="control-label" for="nameInput">Name</label>
+    <div class="controls">
+      <input id="nameInput" type="text" name="name" class="form-control">
+    </div>
+  </div>
+  <div class="form-group">
+    <label class="control-label" for="descriptionTextarea">Description</label>
+    <div class="controls">
       <textarea id="descriptionTextarea" name="description" class="form-control"></textarea>
     </div>
   </div>
